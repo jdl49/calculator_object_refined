@@ -1,6 +1,10 @@
 from MathOperations import difference
 from MathOperations.Addition import Addition
 from MathOperations.difference import Difference
+from MathOperations.divide import Divide
+from MathOperations.multiply import Multiply
+from MathOperations.square import Square
+from MathOperations.squareroot import SquareRoot
 
 class Calculator:
 
@@ -18,13 +22,17 @@ class Calculator:
         return self.result
 
     def multiplication(self, a, b):
-        return a * b
+        self.result = Multiply.multiply(a, b)
+        return self.result
 
     def division(self, a, b):
-        return a / b
+        self.result = Divide.divide(a, b)
+        return self.result
 
     def squareroot(self, a):
-        return a**(.5)
+        self.result = SquareRoot.squareRoot(a)
+        return self.result
 
     def square(self, a):
-        return a**2
+        self.result = Square.square(a)
+        return self.result
