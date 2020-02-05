@@ -8,7 +8,7 @@ class Multiply:
 
     @staticmethod
     def multiplyList(valueList):
-        result = 0
+        result = 1
         for value in valueList:
             result = Multiply.multiply(result, value)
 

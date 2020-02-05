@@ -10,6 +10,10 @@ class Divide:
     def divideList(valueList):
         result = 0
         for value in valueList:
-            result = Divide.divide(result, value)
+            if result == 0:
+                result = value
+
+            else:
+                result = Divide.divide(result, value )
 
         return result

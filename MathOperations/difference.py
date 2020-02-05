@@ -10,6 +10,9 @@ class Difference:
     def defferenceList(valueList):
         result = 0
         for value in valueList:
-            result = Difference.difference(result, value)
+            if result == 0:
+                result = value
+            else:
+                result = Difference.difference(result, value)
 
         return result
